@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        text-decoration: none;
+        box-sizing: border-box;
+    }
+
+    /* video background */
+    #background-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        filter: blur(5px);
+    }
+
+    /* page content */
+
+    body {
+        font-family: Trebuchet MS;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    h2 {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 6rem;
+        margin-top: 30vh;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    main {
+        background-color: rgb(25, 111, 197);
+        font-size: 15px;
+        margin-top: 50vh;
+        padding: 20px;
+        position: relative;
+    }
+
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+
+    .column {
+        -ms-flex: 25%;
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <video id="background-video" autoplay loop muted poster="https://images2.alphacoders.com/941/thumb-1920-941077.jpg">
+        <source src="Media\Anne with an E (Opening - Abertura)_720P HD.mp4" type="video/mp4">
+    </video>
+
+    <h1>Aspectos da vida</h1>
+    <a href="#aspeccult">
+        <h2>Aspectos Culturais</h2>
+    </a>
+    <a href="#aspecprof">
+        <h2>Aspectos Profissionais</h2>
+    </a>
+    <a href="#aspecfml">
+        <h2>Aspectos Profissionais</h2>
+    </a>
+    <a href="#aspecprof">
+        <h2>Aspectos Profissionais</h2>
+    </a>
+
+    <main>
+        <h2 id="aspeccult"> Aspectos Culturais</h2>
+
+        <div class="row">
+            <div class="column">
+                <img src="https://m.media-amazon.com/images/I/511up5B+poL.jpg" style="width:100%">
+                <img src="" style="width:100%">
+                <img src="https://kbimages1-a.akamaihd.net/eb7d916c-0dc8-4327-b750-80b10198ae32/353/569/90/False/anne-i.jpg"
+                    style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://i.ytimg.com/vi/T_idMqvvz1M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCHfTin7jX9JbSVry1nL9rCZZVyFg"
+                    style="width:100%">
+                <img src="https://i.ytimg.com/an_webp/nQWFzMvCfLE/mqdefault_6s.webp?du=3000&sqp=CIiNxokG&rs=AOn4CLC7ialXyJd2WjTiy90kfkOyv0qV6w"
+                    style="width:100%">
+                <img src="https://i.ytimg.com/an_webp/80SJ8XHqKqM/mqdefault_6s.webp?du=3000&sqp=CJvgxYkG&rs=AOn4CLAfffJBaQ9BfTusikqQsF-dcE2hag"
+                    style="width:100%">
+                <img src="https://i.ytimg.com/an_webp/HR4ZxjGQGYY/mqdefault_6s.webp?du=3000&sqp=CKaExokG&rs=AOn4CLDGU80HQoVQUoU393H5oZQbRm_Puw"
+                    style="width:100%">
+                <img src="https://i.ytimg.com/an_webp/m7Bc3pLyij0/mqdefault_6s.webp?du=3000&sqp=CMqFxokG&rs=AOn4CLB3XczVM2COExT-wTyg05rEJ4PqUg"
+                    style="width:100%">
+                <img src="" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4027/9781402712173.jpg"
+                    style="width:100%">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/61FTZ-TUE4L.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://i.ytimg.com/an_webp/v2r1ZOSd--A/mqdefault_6s.webp?du=3000&sqp=CPCAxokG&rs=AOn4CLB2VugfAIDtOcODs_3hVRDBBdRr9Q"
+                    style="width:100%">
+                <img src="https://i.ytimg.com/an_webp/IrqVZuO6v1E/mqdefault_6s.webp?du=3000&sqp=CJnwxYkG&rs=AOn4CLA52X-o1REao3Wq8eKAIoWQwhn8CA"
+                    style="width:100%">
+                <img src="https://i.ytimg.com/an_webp/DVDaiHGmHoo/mqdefault_6s.webp?du=3000&sqp=CPrrxYkG&rs=AOn4CLAdiMP9QhUducHH0pLtnPZjJ-E7rQ"
+                    style="width:100%">
+                <img src="https://i.ytimg.com/an_webp/ZSHJjgpgUTU/mqdefault_6s.webp?du=3000&sqp=CJ6HxokG&rs=AOn4CLD7mJlUQI0gnljd0kLS8gf3ls7xNw"
+                    style="width:100%">
+                <img src="https://i.ytimg.com/an_webp/coDqCnlxlxo/mqdefault_6s.webp?du=3000&sqp=COLrxYkG&rs=AOn4CLB4EelaxTVqZbEQppQoCuqETqq-AQ"
+                    style="width:100%">
+            </div>
+        </div>
+
+
+        <h2 id="aspecprof"> Aspectos Profissionais</h2>
+
+        <div class="row">
+            <div class="column">
+                <img src="https://blog.remontti.com.br/wp-content/uploads/2017/02/web-dev-icon.jpg" style="width:100%">
+                <img src="" style="width:100%">
+                <img src="https://miro.medium.com/max/750/1*3T7J7csXY8u36acofw5N8g.jpeg"
+                    style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://coda.newjobs.com/api/imagesproxy/ms/cms/content30/images/jobs-for-people-who-enjoy-teamwork.jpg"
+                    style="width:100%">
+                <img src="https://miro.medium.com/max/1400/1*R97zdoGSf4gwiYY11ijXsA.png"
+                    style="width:100%">
+                <img src=""
+                    style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://www.ziprecruiter.com/svc/fotomat/public-ziprecruiter/cms/628263428MotivationalSpeaker.jpg"
+                    style="width:100%">
+                <img src="width:100%">
+                <img src="https://res.cloudinary.com/dte7upwcr/image/upload/f_auto,w_1500/blog/blog2/canva/canva-img_header.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://www.troia.eu/Portals/0/xBlog/uploads/2020/7/17/jobplanning.jpg"
+                    style="width:100%">
+                <img src="https://ideas.ted.com/wp-content/uploads/sites/3/2017/09/featured_art_istock_work_home.jpg"
+                    style="width:100%">
+            </div>
+        </div>
+
+        <h2 id="aspecfml"> Aspectos da Família</h2>
+
+        <div class="row">
+            <div class="column">
+                <img src="https://blog.remontti.com.br/wp-content/uploads/2017/02/web-dev-icon.jpg" style="width:100%">
+                <img src="" style="width:100%">
+                <img src="https://miro.medium.com/max/750/1*3T7J7csXY8u36acofw5N8g.jpeg"
+                    style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://coda.newjobs.com/api/imagesproxy/ms/cms/content30/images/jobs-for-people-who-enjoy-teamwork.jpg"
+                    style="width:100%">
+                <img src="https://miro.medium.com/max/1400/1*R97zdoGSf4gwiYY11ijXsA.png"
+                    style="width:100%">
+                <img src=""
+                    style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://www.ziprecruiter.com/svc/fotomat/public-ziprecruiter/cms/628263428MotivationalSpeaker.jpg"
+                    style="width:100%">
+                <img src="width:100%">
+                <img src="https://res.cloudinary.com/dte7upwcr/image/upload/f_auto,w_1500/blog/blog2/canva/canva-img_header.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="https://www.troia.eu/Portals/0/xBlog/uploads/2020/7/17/jobplanning.jpg"
+                    style="width:100%">
+                <img src="https://ideas.ted.com/wp-content/uploads/sites/3/2017/09/featured_art_istock_work_home.jpg"
+                    style="width:100%">
+            
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

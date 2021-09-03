@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/4292/4292164.png" type="image/x-icon" />
+    <title>Document</title>
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    * {
+        text-decoration: none;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    #mySidenav a {
+        box-sizing: unset;
+        position: fixed;
+        left: -180px;
+        transition: 0.3s;
+        padding: 15px;
+        width: 150px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        border-radius: 0 5px 5px 0;
+        padding-right: 50px;
+        z-index: 100;
+    }
+
+    #mySidenav a:hover {
+        left: 0;
+    }
+
+    #cultural {
+        top: 140px;
+        background-color: dodgerblue;
+    }
+
+    #profissional {
+        top: 200px;
+        background-color: midnightblue;
+    }
+
+    #familia {
+        top: 260px;
+        background-color: orange;
+    }
+
+    #relacionamentos {
+        top: 320px;
+        background-color: fuchsia;
+    }
+
+    #links {
+        top: 380px;
+        background-color: rgb(81, 40, 122);
+    }
+
+
+    #background-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        filter: blur(5px);
+    }
+
+    body {
+        font-family: Trebuchet MS;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    h2 {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 6rem;
+        margin-top: 30vh;
+        background-color: black;
+        padding: 3vh;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        opacity: 0.5;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .aspecv:hover {
+        opacity: 1;
+        transition: 0.7s;
+    }
+
+    main {
+        background-color: rgb(25, 111, 197);
+        font-size: 15px;
+        margin-top: 50vh;
+        position: relative;
+    }
+
+    .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+
+    .column {
+        -ms-flex: 25%;
+        flex: 25%;
+        max-width: 50%;
+        padding: 0 4px;
+    }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: dodgerblue;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 7px;
+        border: solid dodgerblue 3px;
+    }
+
+    #myBtn:hover {
+        background-color: white;
+        border: solid dodgerblue 3px;
+        transition: 0.7s;
+        color: dodgerblue;
+    }
+
+    .a1 {
+        background-color: rgb(27, 119, 211);
+        margin: 0;
+        padding: 0;
+    }
+
+    .a2 {
+        background-color: rgb(22, 22, 100);
+        margin: 0;
+        padding: 0;
+    }
+
+    .a3 {
+        background-color: rgb(223, 146, 4);
+        margin: 0;
+        padding: 0;
+    }
+
+    .a4 {
+        background-color: rgb(209, 3, 209);
+        margin: 0;
+        padding: 0;
+    }
+
+    .links {
+        background-color: rebeccapurple;
+        margin: 0;
+        padding: 0;
+    }
+
+    .links a:hover{
+        opacity: 0.5;
+    }
+</style>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="#aspeccult" id="cultural">Cultural</a>
+        <a href="#aspecprof" id="profissional">Profissional</a>
+        <a href="#aspecfml" id="familia">Família</a>
+        <a href="#aspecrelac" id="relacionamentos">Relacionamentos</a>
+        <a href="#links1" id="links">Sites</a>
+    </div>
+    <video id="background-video" autoplay loop muted poster="https://images2.alphacoders.com/941/thumb-1920-941077.jpg">
+        <source src="Media\Anne with an E (Opening - Abertura)_720P HD.mp4" type="video/mp4">
+    </video>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Início</button>
+    <div>
+        <h1 class="aspecv">Aspectos da Vida</h1>
+    </div>
+    <main>
+        <div class="a1">
+            <h2 id="aspeccult"> Aspectos Culturais</h2>
+            <div class="row">
+                <div class="column">
+                    <img src="https://m.media-amazon.com/images/I/511up5B+poL.jpg" style="width:100%">
+                    <img src="" style="width:100%">
+                    <img src="https://kbimages1-a.akamaihd.net/eb7d916c-0dc8-4327-b750-80b10198ae32/353/569/90/False/anne-i.jpg"
+                        style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://i.ytimg.com/vi/T_idMqvvz1M/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCHfTin7jX9JbSVry1nL9rCZZVyFg"
+                        style="width:100%">
+                    <img src="https://i.ytimg.com/vi/fEwDx8YJndU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAgtTDyYpC0x4fFv1BvnVesp1wRgQ"
+                        style="width:100%">
+                    <img src="https://i.ytimg.com/vi/jxSbRY2yjfE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQq0XuIFvxdH3LCM4pVFZuIhwn-w"
+                        style="width:100%">
+                    <img src="https://i.ytimg.com/vi/RE87rQkXdNw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACsVwx5jc4dcEU14UzLtfmxTuQlA"
+                        style="width:100%">
+                    <img src="https://i.ytimg.com/vi/LVMHYzVS9Y4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAOt_11owAM0l8AQy20cBRWx2Dgkg"
+                        style="width:100%">
+                    <img src="" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9781/4027/9781402712173.jpg"
+                        style="width:100%">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/61FTZ-TUE4L.jpg" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://www.hojemais.com.br/imagem/noticia/1000/1000/406905_202675_66118.jpg"
+                        style="width:100%">
+                    <img src="https://cdn.falauniversidades.com.br/wp-content/uploads/2020/10/14161253/esportes.jpg"
+                        style="width:100%">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX63jMY5G0Pqv1yBJK0ClBqYA-GEDr8F2abtZIdjSiLu3k6XNP8xEcNl9SI6h37Yni90E&usqp=CAU"
+                        style="width:100%">
+                    <img src="" style="width:100%">
+                    <img src="https://blog.estantevirtual.com.br/wp-content/uploads/teatro2-1-800x445.png"
+                        style="width:100%">
+                    <img src="https://i.ytimg.com/vi/HLF6KpM7eJM/maxresdefault.jpg" style="width:100%">
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+        <div class="a2">
+            <h2 id="aspecprof">Aspectos Profissionais</h2>
+            <div class="row">
+                <div class="column">
+                    <img src="https://blog.remontti.com.br/wp-content/uploads/2017/02/web-dev-icon.jpg"
+                        style="width:100%">
+                    <img src="" style="width:100%">
+                    <img src="https://miro.medium.com/max/750/1*3T7J7csXY8u36acofw5N8g.jpeg" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://coda.newjobs.com/api/imagesproxy/ms/cms/content30/images/jobs-for-people-who-enjoy-teamwork.jpg"
+                        style="width:100%">
+                    <img src="https://miro.medium.com/max/1400/1*R97zdoGSf4gwiYY11ijXsA.png" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://www.ziprecruiter.com/svc/fotomat/public-ziprecruiter/cms/628263428MotivationalSpeaker.jpg"
+                        style="width:100%">
+                    <img src="https://res.cloudinary.com/dte7upwcr/image/upload/f_auto,w_1500/blog/blog2/canva/canva-img_header.jpg"
+                        style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://www.troia.eu/Portals/0/xBlog/uploads/2020/7/17/jobplanning.jpg"
+                        style="width:100%">
+                    <img src="https://ideas.ted.com/wp-content/uploads/sites/3/2017/09/featured_art_istock_work_home.jpg"
+                        style="width:100%">
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class="a3">
+            <h2 id="aspecfml"> Aspectos da Família</h2>
+            <div class="row">
+                <div class="column">
+                    <img
+                        src="https://www.radiopagina2.com.br/wp-content/uploads/2019/09/chamada-hc-uniao-forca-website-1.jpg">
+                    <img src="https://observatoriodocinema.uol.com.br/wp-content/uploads/2020/06/Fast-and-Furious-9-F9-Fast-Saga-Trailer.jpg"
+                        style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://i.ytimg.com/vi/4RhIW0wmIAA/maxresdefault.jpg">
+                    <img src="https://img.freepik.com/free-photo/joyful-father-son-hugging_23-2147824689.jpg?size=626&ext=jpg"
+                        style="width:100%">
+                    <img src="" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://www.diersmann.com.br/wp-content/uploads/shutterstock_655324876.jpg"
+                        style="width:100%">
+                    <img src="https://d2zcsajde7b23y.cloudfront.net/m/9292958509eacbdb26d46f3c97dc149a670c0354.jpg"
+                        style="width:100%">
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        <div class="a4">
+            <h2 id="aspecrelac"> Aspectos de Relacionamentos</h2>
+            <div class="row">
+                <div class="column">
+                    <img src="https://www.psitto.com.br/wp-content/uploads/2020/08/relacionamentos.jpg"
+                        style="width:100%">
+                    <img src="https://casamento.culturamix.com/blog/wp-content/uploads/2020/12/Foto-de-um-Casal-se-Relacionando-Feliz.jpg"
+                        style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://health.clevelandclinic.org/wp-content/uploads/sites/3/2019/09/dinnerFriendsDiet-1043479218-770x553.jpg"
+                        style="width:100%">
+                    <img src="https://www.wikihow.com/images/thumb/7/7d/Date-Step-12-Version-2.jpg/aid16246-v4-728px-Date-Step-12-Version-2.jpg.webp"
+                        style="width:100%">
+                    <img src="" style="width:100%">
+                </div>
+                <div class="column">
+                    <img src="https://paranashop.com.br/wp-content/uploads/2020/10/netflix-hotels-can-learn.jpg"
+                        style="width:100%">
+                    <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dmlkZW8lMjBnYW1lfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+                        style="width:100%">
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+
+        </div>
+        <div class="links">
+            <h2 id="links1">Sites sobre o *******</h2>
+            <div class="row">
+                <div class="column">
+                    <a target="_blank" href="https://bibleproject.com/"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfVF-BeX5H97E1j2GEJJbWPZG7vfMTVwXZUtrFu_A5PZmFHq2aO6A2Ckhrmvrw9hbLCo&usqp=CAU"
+                            style="width:100%"></a>
+                </div>
+                <div class="column">
+                    <a target="_blank" href="https://www.canva.com/"><img src="https://blog.hotmart.com/blog/2019/08/BLOG_canva.png"
+                            style="width:100%"></a>
+                </div>
+                <div class="column">
+                    <a target="_blank" href="https://www.youtube.com/"><img src="https://www.anapolis.go.leg.br/imagens/youtube.jpg"
+                            style="width:100%"></a>
+                </div>
+            </div>
+            <br><br><br>
+        </div>
+    </main>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+
+</html>
